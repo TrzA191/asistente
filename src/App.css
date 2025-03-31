@@ -1,0 +1,92 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Fondo general y tipografía */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Encabezado de la tarjeta */
+.card-header {
+  padding: 1.5rem;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  font-size: 1rem;
+  color: #333;
+  padding: 1.5rem;
+}
+
+/* Opciones personalizadas en cajas */
+.options-container .option-box {
+  /* Cada caja tendrá un espacio inferior para separarlas */
+  margin-bottom: 1rem;
+}
+.options-container .option-box:last-child {
+  margin-bottom: 0;
+}
+
+/* Ajusta la apariencia de los checkboxes (si se desea personalizar) */
+.form-check-input {
+  margin-right: 10px;
+}
+
+/* Estilo de los botones */
+.button-container button {
+  min-width: 100px;
+}
+
+/* Texto de instrucciones */
+.instruction-text {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 1rem;
+}
