@@ -12,7 +12,7 @@ function App() {
     const navigate = useNavigate(); // Hook para navegar entre rutas
 
     const handleNext = () => {
-        navigate('/home'); // Navegar a la página Home
+        navigate('/suscription'); // Navegar a la página Home
     };
 
     return (

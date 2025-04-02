@@ -1,0 +1,70 @@
+.subscription-container {
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    font-size: 1rem;
+    padding: 5px 0;
+    color: #333;
+}
+
+.subscribe-button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.subscribe-button:hover {
+    background: #0056b3;
+}
