@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { reproducirTexto } from './utils/audioUtils'; 
+import { reproducirTexto } from './utils/audioUtils';
+import Home from './pages/Home';
 
 function App() {
     const [count, setCount] = useState(0);
+    const navigate = useNavigate(); // Hook para navegar entre rutas
+
+    const handleNext = () => {
+        navigate('/home'); // Navegar a la página Home
+    };
 
     return (
         <>
@@ -18,6 +25,7 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
+            {/*
             <h1>Vite + React</h1>
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>
@@ -30,7 +38,7 @@ function App() {
             <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
             </p>
-
+            */}
             <div className="container mt-5">
                 <div className="card shadow">
                     <div className="card-header text-center bg-primary text-white">
@@ -38,42 +46,13 @@ function App() {
                     </div>
                     <div className="card-body">
                         <p>
-                            Hola, bienvenido a nuestra aplicación. Nuestro asistente te guiará para que puedas realizar una suscripción o transferencia paso a paso. 
+                            Hola, bienvenido a nuestra aplicación. Nuestro asistente te guiará para que puedas realizar una suscripción o transferencia paso a paso.
                             El asistente te indicará los pasos a seguir y, al mismo tiempo, podrás ver cómo se resalta la sección en donde debes realizar cada acción.
                         </p>
-                        
-                        <div className="options-container mt-4">
-                            <div className="option-box mb-3">
-                                <div className="form-check p-3 border rounded">
-                                    <input
-                                        className="form-check-input"
-                                        type="checkbox"
-                                        id="transferencia"
-                                        value="transferencia"
-                                    />
-                                    <label className="form-check-label" htmlFor="transferencia">
-                                        Transferencia
-                                    </label>
-                                </div>
-                            </div>
-                            <div className="option-box">
-                                <div className="form-check p-3 border rounded">
-                                    <input
-                                        className="form-check-input"
-                                        type="checkbox"
-                                        id="suscripcion"
-                                        value="suscripcion"
-                                    />
-                                    <label className="form-check-label" htmlFor="suscripcion">
-                                        Suscripción
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
+                        {/**/}
                         <div className="button-container d-flex justify-content-center mb-3">
-                            <button className="btn btn-outline-secondary me-3">Atrás</button>
-                            <button className="btn btn-primary">Siguiente</button>
+                            {/*<button className="btn btn-outline-secondary me-3">Atrás</button>*/}
+                            <button className="btn btn-primary" onClick={handleNext}>Siguiente</button>
                         </div>
 
                         <p className="instruction-text text-center">
@@ -81,9 +60,10 @@ function App() {
                         </p>
                     </div>
                 </div>
-                <button onClick={() => reproducirTexto("...Hola, bienvenido a nuestra aplicación. Nuestro asistente te guiará para que puedas realizar una suscripción o transferencia paso a paso. El asistente te indicará los pasos a seguir y, al mismo tiempo, podrás ver cómo se resalta la sección en donde debes realizar cada acción.")}>
-    Reproducir Audio
-</button>
+                
+                <button onClick={() => reproducirTexto("Hola, bienvenido a nuestra aplicación...")}>
+                    Reproducir Audio
+                </button>
             </div>
         </>
     );
