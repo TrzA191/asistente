@@ -12,7 +12,7 @@ function App() {
     const navigate = useNavigate(); // Hook para navegar entre rutas
 
     const handleNext = () => {
-        navigate('/home'); // Navegar a la página Home
+        navigate('/suscription'); // Navegar a la página Home
     };
 
     return (
@@ -61,7 +61,7 @@ function App() {
                     </div>
                 </div>
                 
-                <button onClick={() => reproducirTexto("Hola, bienvenido a nuestra aplicación...")}>
+                <button onClick={() => reproducirTexto("Hola, bienvenido a nuestra aplicación. Nuestro asistente te guiará para que puedas realizar una suscripción o transferencia paso a paso. El asistente te indicará los pasos a seguir y, al mismo tiempo, podrás ver cómo se resalta la sección en donde debes realizar cada acción.")}>
                     Reproducir Audio
                 </button>
             </div>
