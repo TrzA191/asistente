@@ -1,7 +1,30 @@
 // src/utils/audioUtils.js
 
+let currentSpeech = null;
+
 export function reproducirTexto(texto) {
-    const speech = new SpeechSynthesisUtterance(texto);
-    speech.lang = 'es-ES'; // Español de España, puedes cambiarlo según necesites
-    speechSynthesis.speak(speech);
+    cancelarAudio(); // Detener cualquier reproducción anterior
+    currentSpeech = new SpeechSynthesisUtterance(texto);
+    currentSpeech.lang = 'es-ES';
+    window.speechSynthesis.speak(currentSpeech);
+    return currentSpeech;
+}
+
+export function pausarAudio() {
+    if (window.speechSynthesis) {
+        window.speechSynthesis.pause();
+    }
+}
+
+export function reanudarAudio() {
+    if (window.speechSynthesis) {
+        window.speechSynthesis.resume();
+    }
+}
+
+export function cancelarAudio() {
+    if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+    }
+    currentSpeech = null;
 }

@@ -90,3 +90,19 @@ body {
   color: #666;
   margin-top: 1rem;
 }
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.button-container {
+  padding: 15px 0;
+}
+
+.btn {
+  min-width: 100px;
+}
+
+.bi {
+  font-size: 1rem;
+}
