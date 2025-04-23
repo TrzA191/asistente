@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Subscription.css';
-import { reproducirTexto, pausarAudio, reanudarAudio, cancelarAudio } from 'C:/Users/Isaac/desktop/asistente/src/utils/audioUtils.js';
+import { reproducirTexto, pausarAudio, reanudarAudio, cancelarAudio } from '../utils/audioUtils';
 
 const Suscripcion = () => {
   const [audioState, setAudioState] = useState('stopped');
